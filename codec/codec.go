@@ -21,9 +21,9 @@ type Type string
 const GobType Type = "application/gob"
 const JsonType Type = "application/json"
 
-var NewCodeFuncMap map[Type]NewCodecFunc
+var NewCodecFuncMap map[Type]NewCodecFunc
 
 func init() {
-	NewCodeFuncMap = make(map[Type]NewCodecFunc)
-	NewCodeFuncMap[GobType] = NewGobCodec
+	NewCodecFuncMap = make(map[Type]NewCodecFunc)
+	NewCodecFuncMap[GobType] = NewGobCodec
 }
